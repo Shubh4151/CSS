@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: none;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: cadetblue;
+            height: 20vh;
+            width: 100%;
+        }
+        .logo,.ppic{
+            width: 90px;
+            height: 90px;
+        }
+        nav img{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            
+            padding: 10px;
+            border-radius: 20%;
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .search{
+            width: 20%;
+            height: 30px;
+            position: relative;
+        }
+        .search input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-bottom: 3px solid ;
+            background-color: transparent;
+            box-sizing: border-box;
+            padding-right: 35px;
+            font-size: 15px;
+        }
+        ::placeholder{
+            color: grey;
+            font-size: 15px;
+        }
+        i{
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            color: grey;
+        }
+        .bnr{
+            width: 100%;
+            height: 80vh;
+            background-image: linear-gradient(rgba(100,20,35,0.5),rgba(200,10,50,0.6));
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* page2 */
+        .bnrcont{
+            width: 60%;
+            border: 2px solid gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 30px;
+            gap: 10px;
+        }
+        .bnrcont h1{
+            color:black;
+            font-size: 40px;
+        }
+        .bnrcont p{
+            font-size: 15px;
+            text-align: justify;
+            padding: 10px;
+        }
+        .bnrcont input{
+            width: 100%;
+            height: 5vh;
+            background: transparent;
+            font-size: 20px;
+            color:rgba(100,20,35,0.5);
+        }
+        .bnrcont button{
+            width: 120px;
+            font-size: 20px;
+            font-family: cursive;
+            color: rgb(110, 39, 39);
+            background: transparent;
+            border: 2px doubl;
+            padding: 10px;
+        }
+        .cardcon{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 5px;
+            padding: 20px;
+            background-image: linear-gradient(rgba(144,12,144,0.6),rgba(20,123,119,0.6)),url("bgimg.jpg");
+        }
+        .card{
+            width:40%;
+            height: 200px;
+            background-color: bisque;
+            text-align: center;
+            font-weight: bold;
+            color: antiquewhite;
+        }
+        .img{
+            width: 10px;
+            height: 10px;
+        }
+
+        .card img{
+            width: 100%;
+            height: 100%;
+            background: cover;
+        }
+        footer{
+            width: 100%;
+            height: 10vh;
+            color: white;
+            background-color: black;
+            text-align: center;
+            justify-items: center;
+            padding: 15px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="data:image/jpeg;base64,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">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Enter data"/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="menu">
+            <div>Home</div>
+            <div>About</div>
+            <div>Login</div>
+            <div>Register</div>
+            <div>Contact Us</div>
+            <div class="ppic">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUy9s7L2aRDadM1KxmVNkNQ9Edar2APzIeHw&s">
+            </div>
+        </div>
+    </nav>
+        <div class="bnr">
+            <div class="bnrcont">
+                <h1>Welcome to My Page</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo modi, eius ullam qui inventore quis laboriosam minima. Doloribus officiis libero dolores explicabo nulla vel! Quo soluta omnis, qui ipsa iusto eveniet ut odit doloremque repellat tempore dolores laborum aspernatur voluptates natus deleniti laudantium at exercitationem aliquid accusamus temporibus ex. Veritatis.</p>
+                <input type="text">
+                <input type="text">
+                <button>Login</button>
+            </div>
+        </div>
+
+
+        <!-- page 2 -->
+
+        <h2>Card Container</h2>
+        <div class="cardcon">
+            <div class="card"><img src="v1.jpg">Card 1</div>
+            <div class="card"><img src="v2.jpg">Card 2</div>
+            <div class="card"><img src="v3.jpg">card 3</div>
+            <div class="card"><img src="v4.jpg">Card 4</div>
+        </div>
+
+    </div>
+    <footer>
+        @ Copyright-2024
+    </footer>
+</body>
+</html>

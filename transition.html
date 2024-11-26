@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .con{
+            width: 200px;
+            height: 100px;
+            background-color: blueviolet;
+            opacity: 1;
+            transition: opacity 15s linear, width 5s linear, transform 8s ease-in;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="con" onclick="fun()"></div>
+
+    <script>
+        let con=document.getElementsByClassName("con")[0]
+        let fun=()=>{
+            con.style.transform="translateY(200px)";
+            con.style.width="500px";
+            con.style.opacity="0"
+        }
+    </script>
+</body>
+</html>

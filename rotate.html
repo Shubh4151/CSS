@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .con{
+            margin: 40px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(red,blue,yellow,orange);
+        }
+        .Y{
+            animation: rt 10s linear infinite;
+        }
+        @keyframes rt{
+            from{
+                transform: rotate(0deg);
+                transform: ;
+                /* transform: rotateX(0deg); */
+                /* transform: rotateY(0deg); */
+            }
+            to{
+                transform: rotate(360deg);
+                /* transform: rotateX(360deg); */
+                /* transform: rotateY(360deg); */
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="con" onclick="fun(this)"></div>
+
+    <script>
+        let fun=(e)=>{
+            if(e.className=="con")
+            {
+                e.className="con Y"
+            }
+            else{
+                e.className="con"
+            }
+        }
+    </script>
+</body>
+</html>

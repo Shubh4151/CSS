@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calci</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: none;
+        }
+        .con{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+            background-color: rgba(122,144,10,0.7);
+            background-size: cover;
+        }
+        .form{
+            width: 40%;
+            border: 2px solid grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .disp{
+            width: 100%;
+            height: 40px;
+        }
+        .disp input{
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            background: transparent;
+            text-align: right;
+            box-sizing: border-box;
+            padding-right: 5px;
+            color: cadetblue;
+        }
+        .pnl{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: grey;
+            gap: 2px;
+        }
+        .pnl button{
+            width: 20%;
+            color: white;
+            background-color: black;
+            padding: 5px;
+            font-size: 25px;
+            font-weight: 800px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="form">
+            <div class="disp">
+                <input type="number"/>
+            </div>
+            <div class="pnl">
+                <button>AC</button>
+                <button>C</button>
+                <button>*</button>
+                <button>/</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>+</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>%</button>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button>=</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
