@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: none;
+        }
+        
+        button{
+            width: 20%;
+            margin: 10px;
+            justify-items: center;
+            align-items: center;
+            /* display: flex;
+            flex-direction: row; */
+            justify-content: space-evenly;
+            border: 5px solid gray;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .b1{
+            background-color: red;
+        }
+        .b2{
+            background-color:green;
+        }
+        .b3{
+            background-color: blue;
+        }
+        .b4{
+            background-color:yellow;
+        }
+    </style>
+</head>
+   
+<body>
+  <button class="b1" onclick="changeBGC('red')">Red</button>
+  <button class="b2" onclick="changeBGC('green')">Green</button>
+  <button class="b3" onclick="changeBGC('blue')">Blue</button>
+  <button class="b4" onclick="changeBGC('yellow')">Yellow</button>
+
+  <script>
+    function changeBGC(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>
+
+
+
+    
+    

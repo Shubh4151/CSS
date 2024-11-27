@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .CountDisp{
+            height: 140px;
+            width: 140px;
+            border: 2px solid black;
+            margin: 20px;
+            background-color: bisque;
+            color: gray;
+            text-align: center;
+            align-content: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="CountDisp">Counter</h1>
+    <button class="Increment">Increment</button>
+    <button class="Decrement">Decrement</button>
+    <button class="Reset">Reset</button>
+
+
+    <script>
+        let CountDisp=document.querySelector('.CountDisp');
+        let Increment=document.querySelector('.Increment');
+        let Decrement=document.querySelector('.Decrement');
+        let Reset=document.querySelector('.Reset');
+        let Count=0;
+        updateCount();
+
+        Increment.addEventListener("click",()=>{
+            Count++;
+            updateCount();
+        });
+        Decrement.addEventListener("click",()=>{
+            Count--;
+            updateCount();
+        });
+        Reset.addEventListener("click",()=>{
+            Count=0;
+            updateCount();
+        });
+
+        function updateCount(){
+            CountDisp.innerHTML = Count;
+        };
+    </script>
+    
+</body>
+</html>
