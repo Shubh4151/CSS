@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            width: 100%;
+            height: 10vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        nav div{
+            width: 12%;
+            color: white;
+            font-size: 20px;
+            background-color: cadetblue;
+            text-align: center;
+            padding: 6px 0px;
+        }
+        nav div:hover{
+            cursor:grab
+        }
+        .home{
+            position: relative;
+        }
+        .submenu{
+            width: 100%;
+            background-color: darkgoldenrod;
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            color: crimson;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 10px;
+            box-sizing: border-box;
+            gap: 6px;
+        }
+        .file{
+            position: relative;
+            width: 100%;
+            text-align: left;
+        }
+        .fm{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            left: 100%;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="home" onclick="fun(this)">Home
+        <div class="submenu" style="display:none;" onclick="fun1(event)">
+            <span class="file" onclick="dfm()">File
+                <div class="fm" style="display:none;">
+                    <span>New File</span>
+                    <span>Edit</span>
+                    <span>Save</span>
+                    <span>Save As</span>
+                </div>
+            </span>
+            <span>Open</span>
+            <span>Edit</span>
+            <span>Close</span>
+        </div>
+    </div>
+        <div>About</div>
+        <div>Login</div>
+        <div>Register</div>
+    </nav>
+
+    <script>
+        let sm=document.getElementsByClassName("submenu")[0]
+        let fm=document.getElementsByClassName("fm")[0]
+        let prv=document.getElementsByClassName("home")[0]
+        let fun=(e)=>{
+            prv.style.background="cadetblue"
+            e.style.background="orange"
+            prv=e
+            if(sm.style.display=="none")
+            {
+                sm.style.display="flex";
+            }
+            else
+            {
+                sm.style.display="none";
+            }
+        }
+        let fun1=(e)=>{
+            e.stopPropogation()
+        }
+        let dfm=(e)=>{
+            if(fm.style.display=="none")
+            {
+                fm.style.display="flex";
+            }
+            else
+            {
+                fm.style.display="none"
+            }
+        }
+        
+    </script>
+</body>
+</html>

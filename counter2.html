@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="0">
+    <button onclick="inc()">INC</button>
+    <button onclick="dec()">DEC</button>
+    <button onclick="rst()">RESET</button>
+
+    <script>
+        let ipr=document.getElementsByTagName('input')[0];
+        let inc=()=>{
+            let c=parseInt(ipr.value)
+            ipr.value=c+1
+        }
+        let dec=()=>{
+            let c=parseInt(ipr.value)
+            ipr.value=c-1
+            // if(c==0){
+            //     ipr.value=0
+            // }
+        }
+        let rst=()=>{
+            ipr.value=0
+        }
+    </script>
+</body>
+</html>
