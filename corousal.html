@@ -81,7 +81,7 @@
                     <button>Know More</button>
                 </div>
             <button class="lt" onclick="bkw()">&lt;</button>
-            <button class="rt" onclick="move()">&gt;</button>
+            <button class="rt" onclick="fwd()">&gt;</button>
             <div class="dotcon">
                 <i class="fa-solid fa-circle" onclick="set(0)"></i>
                 <i class="fa-regular fa-circle" onclick="set(1)"></i>
@@ -104,23 +104,8 @@
         let hr=document.getElementsByTagName("h1")[0]
         let pr=document.getElementsByTagName("p")[0]
         let ir=document.getElementsByTagName("i")
-        let i=-1
+        let i=0
         let fwd=()=>{
-            if(i!=-1)
-            {
-            ir[i].className="fa-regular fa-circle"
-            }
-            i=(i+1)%a.length
-            imgr.src=a[i].img
-            hr.innerHTML=a[i].h
-            pr.innerHTML=a[i].p
-            ir[i].className="fa-solid fa-circle"
-        }
-        let move=()=>{
-            if(i==-1)
-            {
-            i=0
-            }
             ir[i].className="fa-regular fa-circle"
             i=(i+1)%a.length
             imgr.src=a[i].img
@@ -129,10 +114,6 @@
             ir[i].className="fa-solid fa-circle"
         }
         let bkw=()=>{
-            if(i==-1)
-        {
-            i=0
-        }
             ir[i].className="fa-regular fa-circle"
             i=i-1
             if(i<0)
@@ -145,10 +126,6 @@
             ir[i].className="fa-solid fa-circle"
         }
         let set=(ind)=>{
-            if(i==-1)
-            {
-            i=0
-        }
             ir[i].className="fa-regular fa-circle"
             i=ind
             imgr.src=a[i].img
